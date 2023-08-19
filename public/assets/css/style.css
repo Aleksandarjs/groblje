@@ -1,0 +1,1266 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+.btn {
+  padding: 1.5rem 5rem;
+  border: 1px solid transparent;
+  border-radius: 2rem;
+  letter-spacing: 0.1rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  transition: 0.4s;
+  outline: none;
+  box-shadow: none;
+}
+.btn.btn-primary {
+  background-color: var(--gold);
+  color: #fff;
+}
+.btn.btn-primary:hover {
+  border: 1px solid var(--gold);
+  background-color: #fff;
+  color: var(--gold);
+}
+.btn.btn-primary:active, .btn.btn-primary:focus {
+  box-shadow: none;
+  outline: 0;
+}
+.btn.btn-secondary {
+  background-color: #fff;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 0.7rem 5rem;
+}
+.btn.btn-secondary:hover {
+  background-color: var(--gold);
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #444444;
+  font-family: "Jost", sans-serif;
+  position: relative;
+}
+
+:root {
+  --gold: #b19540;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.title {
+  font-size: 3.5rem;
+  letter-spacing: 0.02rem;
+  color: var(--gold);
+  font-family: "Libre Baskerville", serif;
+}
+
+.txt {
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+
+.navbar {
+  border-top: 2rem solid #e7e7e7;
+  padding: 3rem 15rem;
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+}
+@media only screen and (max-width: 1920.9px) {
+  .navbar::before {
+    content: "";
+    background-image: url("../images/navbar.png");
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -100px;
+    height: 228px;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.navbar .container-fluid .collapse {
+  justify-content: center;
+}
+.navbar .container-fluid .collapse ul li:not(:last-child) {
+  margin-right: 5.5rem;
+}
+.navbar .container-fluid .collapse ul li a {
+  letter-spacing: 0.1rem;
+}
+.navbar .container-fluid .collapse ul li:last-child span {
+  font-size: 1.5rem;
+  color: var(--gold);
+}
+.navbar .container-fluid .collapse ul li:last-child a {
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.hero-section {
+  height: 810px;
+}
+.hero-section .bg {
+  background-position: center;
+}
+.hero-section .wrapper {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+}
+.hero-section .wrapper h1 {
+  letter-spacing: 0.2rem;
+  font-family: "Libre Baskerville", serif;
+  font-size: 3rem;
+  letter-spacing: 1.4;
+}
+.hero-section .wrapper h1 span {
+  font-family: "Jost", sans-serif;
+  display: block;
+  font-size: 4rem;
+  margin: 3rem 0;
+}
+
+.tombstones-section {
+  position: relative;
+  height: 175rem;
+}
+.tombstones-section .wrapper {
+  position: relative;
+}
+.tombstones-section .wrapper::before {
+  content: "";
+  position: absolute;
+  top: -20rem;
+  background-color: #fff;
+  height: 30rem;
+  width: 100%;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  z-index: 1;
+  box-shadow: 12px 0 11px -16px rgba(0, 0, 0, 0.8), -12px 0 11px -16px rgba(0, 0, 0, 0.8);
+}
+.tombstones-section .wrapper h2 {
+  padding: 0 10rem;
+  top: -30rem;
+  position: absolute;
+  font-size: 3rem;
+  color: #fff;
+  font-family: "Libre Baskerville", serif;
+  letter-spacing: 0.02rem;
+}
+.tombstones-section .wrapper .row {
+  padding: 0 10rem;
+}
+.tombstones-section .wrapper .row p {
+  font-weight: 300;
+  position: absolute;
+  z-index: 1;
+  top: -16.5rem;
+  font-size: 1.8rem;
+}
+.tombstones-section .wrapper .row img {
+  position: absolute;
+  z-index: 1;
+  top: -40rem;
+}
+.tombstones-section .wrapper .btn.btn-primary {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%);
+}
+.tombstones-section .wrapper .line {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  transform: translate(-50%);
+  width: 545px;
+  height: 2px;
+  background-color: var(--gold);
+  bottom: -10rem;
+}
+.tombstones-section .tombstones {
+  position: absolute;
+  top: 25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.tombstones-section .tombstones .holder {
+  padding: 0 5rem;
+}
+.tombstones-section .tombstones .holder .title {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.tombstones-section .tombstones .holder p {
+  text-align: center;
+}
+.tombstones-section .tombstones .holder .row {
+  margin-top: 8rem;
+  row-gap: 5rem;
+}
+.tombstones-section .tombstones .holder .col-md-6 {
+  text-align: center;
+}
+.tombstones-section .tombstones .holder h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 3rem 0;
+}
+
+.materials {
+  height: 60rem;
+  position: relative;
+  top: -9rem;
+}
+.materials .wrapper {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.materials .wrapper .title {
+  padding-left: 1rem;
+}
+.materials .wrapper .txt {
+  color: #fff;
+  margin-top: 3rem;
+}
+
+.shadow {
+  position: relative;
+}
+.shadow .wrapper {
+  position: relative;
+}
+.shadow .wrapper::before {
+  content: "";
+  position: absolute;
+  bottom: -7rem;
+  width: 100%;
+  height: 25rem;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  background-color: #fff;
+  z-index: -1;
+  box-shadow: -12px 20px 31px -26px rgba(0, 0, 0, 0.8), 12px 10px 11px -16px rgba(0, 0, 0, 0.8);
+}
+
+.gallery {
+  z-index: 1;
+  position: relative;
+  top: -9rem;
+  padding: 5rem 0 25rem 0;
+}
+.gallery .bg {
+  background-position: bottom;
+}
+.gallery .title,
+.gallery .txt {
+  text-align: center;
+}
+.gallery .wrapper .row {
+  padding: 0 3rem;
+  row-gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.credentials {
+  position: relative;
+  height: 55rem;
+  top: -9rem;
+  padding: 15rem 0;
+}
+.credentials .container {
+  position: relative;
+}
+.credentials .container [alt=quotes] {
+  position: absolute;
+  top: -10%;
+  left: 10%;
+}
+.credentials .title {
+  color: #fff;
+  text-align: center;
+}
+.credentials .wrapper {
+  max-width: 50%;
+  text-align: center;
+  margin: 5rem auto 0 auto;
+}
+.credentials .wrapper .txt {
+  color: #fff;
+}
+.credentials .wrapper .txt em {
+  display: block;
+  margin: 3rem 0;
+}
+
+.slick-dots li button:before {
+  opacity: 0.5;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #fff;
+}
+
+.slick-next:before {
+  content: url("../images/arrow-right.png");
+}
+
+.slick-prev:before {
+  content: url("../images/arrow-left.png");
+}
+
+.contact {
+  position: relative;
+  top: -9rem;
+  padding: 10rem 0 25rem 0;
+}
+.contact .title {
+  margin-bottom: 7rem;
+  text-align: center;
+}
+.contact .row {
+  row-gap: 5rem;
+}
+.contact form {
+  padding: 0 15rem;
+}
+.contact form input:not([type=checkbox]),
+.contact form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--gold);
+  color: var(--gold);
+  padding-bottom: 1rem;
+  outline: none;
+  background-color: transparent;
+  resize: none;
+  margin-bottom: "unset";
+}
+.contact form input:not([type=checkbox])::placeholder,
+.contact form textarea::placeholder {
+  color: var(--gold);
+}
+.contact form .btn {
+  margin-top: 5rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 3rem 0;
+  z-index: 2;
+}
+footer .wrapper {
+  text-align: center;
+}
+footer .wrapper .txt {
+  margin-top: 5rem;
+}
+footer .wrapper ul {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+footer .wrapper ul li a {
+  color: #fff;
+}
+footer .wrapper ul li a:hover {
+  color: var(--gold);
+}
+
+/* GALLERY PAGE  */
+.main {
+  position: relative;
+  padding: 10rem 0 35rem 0;
+}
+.main:has(.contact) {
+  padding: 10rem 0 0 0;
+}
+.main .container > :is(.title, p) {
+  text-align: center;
+}
+.main .wrapper {
+  margin-top: 5rem;
+}
+.main .wrapper .row {
+  row-gap: 3rem;
+}
+.main .faq,
+.main .order-process,
+.main .credentials-page {
+  padding: 3rem 0;
+  border-top: 1px solid var(--gold);
+}
+.main .row:last-child .faq,
+.main .row:last-child .order-process,
+.main .row:last-child .credentials-page {
+  border-bottom: 1px solid var(--gold);
+}
+.main .order-process {
+  text-align: center;
+  position: relative;
+}
+.main .order-process .num {
+  position: absolute;
+  top: -11%;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--gold);
+  color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .credentials-page {
+  padding: 7rem 20rem;
+  text-align: center;
+  position: relative;
+}
+.main .credentials-page::before {
+  content: url("../images/quotes.png");
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 13.5rem;
+  height: 11rem;
+}
+.main .credentials-page h3 {
+  font-family: "Libre Baskerville", serif;
+  margin-top: 3rem;
+}
+.main .contact > .row:first-child {
+  padding: 0 25rem;
+}
+.main .contact > .row:first-child div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.main .contact > .row:first-child div p {
+  margin-bottom: 0;
+}
+.main .contact > .row:first-child div a {
+  color: #000;
+  text-decoration: none;
+}
+.main .contact .wrapper .row:first-child {
+  justify-content: space-between;
+}
+
+.selection {
+  padding: 10rem 0 30rem 0;
+}
+.selection h2 {
+  font-size: 2rem;
+  padding: 0 0 3rem 5rem;
+}
+.selection .grave-pattern {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+}
+.selection .nav-tabs {
+  border: none;
+}
+.selection .nav-tabs .nav-item {
+  width: 33.3%;
+}
+.selection .nav-tabs .nav-item .nav-link {
+  border: none;
+  width: 100%;
+  text-align: left;
+  border-bottom: 3px solid #eeeeee;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: #000;
+}
+.selection .nav-tabs .nav-item .nav-link span {
+  background-color: #dedede;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.selection .nav-tabs .nav-item .nav-link.active {
+  border-bottom: 3px solid var(--gold);
+}
+.selection .nav-tabs .nav-item .nav-link.active span {
+  background-color: var(--gold);
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.selection .tab-content .wrapper {
+  padding: 4rem;
+}
+.selection .tab-content .title-line-through {
+  position: relative;
+  margin: 6rem 0 5rem 0;
+}
+.selection .tab-content .title-line-through h3 {
+  text-transform: uppercase;
+  padding: 0 1rem;
+  background-color: #fff;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-left: 4rem;
+  font-size: 1.8rem;
+  letter-spacing: 0.02rem;
+  font-weight: 300;
+}
+.selection .tab-content .title-line-through .line-through {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 2px;
+  background-color: #eee;
+  z-index: -1;
+}
+.selection .tab-content .col-md-3 {
+  text-align: center;
+}
+.selection .tab-content .col-md-3 img {
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.selection .tab-content .col-md-3 img.active {
+  border: 2px solid var(--gold);
+}
+.selection .tab-content .col-md-3 h4 {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.4rem;
+}
+.selection .tab-content .col-md-3 h5 {
+  color: var(--gold);
+}
+.selection .tab-content .decorating {
+  padding-bottom: 6rem;
+  border-bottom: 2px solid #eee;
+}
+.selection .tab-content ul {
+  list-style-type: none;
+  display: flex;
+  margin-bottom: 0;
+  gap: 1.5rem;
+}
+.selection .tab-content ul .pick-color {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.selection .tab-content .font-resizer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.selection .tab-content .font-resizer button {
+  border: none;
+  background-color: #fff;
+  color: var(--gold);
+  font-size: 2.8rem;
+}
+.selection .tab-content .font-resizer span {
+  color: var(--gold);
+  font-size: 3.2rem;
+}
+.selection .tab-content .editor .row {
+  row-gap: 3rem;
+}
+.selection .tab-content .editor .row .col-lg-5 {
+  display: flex;
+  align-items: center;
+}
+.selection .tab-content .editor input {
+  border: none;
+  border-bottom: 1px solid var(--gold);
+  color: var(--gold);
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+}
+.selection .tab-content .editor input::placeholder {
+  color: var(--gold);
+}
+.selection .tab-content .editor select {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  box-shadow: none;
+}
+.selection .tab-content .ornament {
+  text-align: center;
+}
+.selection .tab-content .ornament .row {
+  row-gap: 2rem;
+}
+.selection .tab-content .ornament h3 {
+  color: var(--gold);
+  margin-top: 3rem;
+}
+.selection .tab-content .pick-ornament svg,
+.selection .tab-content .pick-ornament img {
+  cursor: pointer;
+}
+.selection .tab-content .upload {
+  text-align: center;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #eee;
+}
+.selection .tab-content .btn-split {
+  display: flex;
+  justify-content: space-between;
+}
+.selection .tab-content .btn-split button.btn {
+  display: unset;
+  margin-left: unset;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.selection .tab-content .grave-type {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 7.5rem;
+}
+.selection .tab-content .grave-type button.active {
+  color: #fff;
+  background-color: var(--gold);
+}
+.selection .tab-content .price {
+  justify-content: space-between;
+  padding: 3rem 0 1.5rem 0;
+  border-bottom: 1px solid #eee;
+  color: var(--gold);
+}
+.selection .tab-content .price h4 {
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+.selection .tab-content .price h3 {
+  text-align: right;
+  font-size: 2.5rem;
+  font-family: "Libre Baskerville", serif;
+}
+.selection button.btn:not(.btn-secondary) {
+  margin-top: 2rem;
+  display: block;
+  margin-left: auto;
+}
+.selection button.btn:not(.btn-secondary)[alt=cart] {
+  display: flex;
+  gap: 2rem;
+}
+
+.register-login {
+  padding: 7.5rem 0 30rem 0;
+}
+.register-login h2 {
+  margin-bottom: 3rem;
+}
+.register-login .login {
+  padding: 5rem 12rem;
+}
+.register-login .login input:not([type=checkbox]),
+.register-login .login textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--gold);
+  color: var(--gold);
+  padding-bottom: 1rem;
+  outline: none;
+  background-color: transparent;
+  resize: none;
+  margin-bottom: 2rem;
+}
+.register-login .login input:not([type=checkbox])::placeholder,
+.register-login .login textarea::placeholder {
+  color: var(--gold);
+}
+.register-login .login a {
+  display: block;
+  color: #000;
+}
+.register-login .register {
+  padding: 5rem 10rem;
+  box-shadow: 53px -1px 21px -68px rgba(0, 0, 0, 0.93) inset;
+  -webkit-box-shadow: 53px -1px 21px -68px rgba(0, 0, 0, 0.93) inset;
+  -moz-box-shadow: 53px -1px 21px -68px rgba(0, 0, 0, 0.93) inset;
+}
+.register-login .register input:not([type=checkbox]),
+.register-login .register textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--gold);
+  color: var(--gold);
+  padding-bottom: 1rem;
+  outline: none;
+  background-color: transparent;
+  resize: none;
+  margin-bottom: 2rem;
+}
+.register-login .register input:not([type=checkbox])::placeholder,
+.register-login .register textarea::placeholder {
+  color: var(--gold);
+}
+.register-login .register p {
+  margin-bottom: 2rem;
+}
+.register-login .btn {
+  margin-top: 3rem;
+}
+
+.tombstone {
+  height: unset;
+  padding: 15rem 0;
+}
+.tombstone h2,
+.tombstone p {
+  text-align: center;
+}
+.tombstone .row {
+  margin-top: 10rem;
+  row-gap: 5rem;
+}
+.tombstone .row .col-lg-3 {
+  text-align: center;
+}
+.tombstone .row .col-lg-3 h3 {
+  margin: 3rem 0;
+}
+
+.settings {
+  padding: 15rem 0 45rem 0;
+}
+.settings .col-lg-4 {
+  box-shadow: -53px -1px 21px -68px rgba(0, 0, 0, 0.93) inset;
+  -webkit-box-shadow: -53px -1px 21px -68px rgba(0, 0, 0, 0.93) inset;
+  -moz-box-shadow: -53px -1px 21px -68px rgba(0, 0, 0, 0.93) inset;
+}
+.settings .nav-link {
+  color: #000;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.settings .nav-link.active {
+  background-color: transparent;
+  font-weight: bold;
+  color: #000;
+}
+.settings h2 {
+  margin-bottom: 5rem;
+}
+.settings .tab-content {
+  padding: 0 5rem;
+}
+.settings h3 {
+  letter-spacing: 0.1rem;
+  font-size: 2.4rem;
+}
+.settings .line {
+  width: 70%;
+  height: 3px;
+  background-color: #b19540;
+  margin: 1rem 0 5rem 0;
+}
+.settings .address .title:last-of-type {
+  margin-top: 5rem;
+}
+.settings .address .btn {
+  margin-top: 3rem;
+}
+.settings .config-row {
+  border-top: 1px solid #eee;
+  padding: 5rem 0;
+}
+.settings .config-row h4 {
+  padding-left: 5rem;
+}
+.settings .config-row p {
+  margin-bottom: 0;
+}
+.settings .config-row h3.txt {
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  color: var(--gold);
+}
+.settings .config-row .configuration {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.settings .config-row .configuration h3 {
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-top: 3rem;
+  font-size: 1.8rem;
+}
+.settings input:not([type=checkbox]),
+.settings textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--gold);
+  color: var(--gold);
+  padding-bottom: 1rem;
+  outline: none;
+  background-color: transparent;
+  resize: none;
+  margin-bottom: 4rem;
+}
+.settings input:not([type=checkbox])::placeholder,
+.settings textarea::placeholder {
+  color: var(--gold);
+}
+
+.cart {
+  padding: 7.5rem 0 30rem 0;
+}
+.cart .container > :is(h2, p) {
+  text-align: center;
+}
+.cart .col-lg-1 h3 {
+  text-align: center;
+}
+.cart h3 {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.cart .cart-image {
+  max-height: 15rem;
+  max-width: 11rem;
+}
+.cart .cart-item {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 1.5rem 0;
+}
+.cart .cart-item .item-num {
+  text-align: center;
+}
+.cart .cart-item .item-num span {
+  padding: 0 1rem;
+}
+.cart .cart-item .item-num button {
+  color: var(--gold);
+}
+.cart .cart-item button {
+  background-color: transparent;
+  border: none;
+}
+.cart .cart-item > * {
+  color: var(--gold);
+}
+.cart .cart-item .col-lg-1:last-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart .cart-item .col-lg-1:last-of-type img {
+  cursor: pointer;
+}
+.cart .cart-item h5 {
+  font-size: 1.8rem;
+}
+.cart .cart-footer {
+  margin-top: 1.5rem;
+}
+.cart .cart-footer > .row {
+  justify-content: space-between;
+}
+.cart .cart-footer :is(.col-lg-3, .col-lg-6) {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+.cart .cart-footer .col-lg-6 {
+  align-items: end;
+}
+.cart .cart-footer .total {
+  font-size: 2.5rem;
+  color: var(--gold);
+  font-family: "Libre Baskerville", serif;
+}
+.cart .cart-footer h4 {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+@media only screen and (max-width: 1799px) {
+  .navbar .container-fluid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .navbar .container-fluid .collapse ul li:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+  .navbar .container-fluid .collapse ul li a {
+    font-size: 1.4rem;
+    letter-spacing: unset;
+  }
+
+  .selection .nav-tabs .nav-item .nav-link {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 1199.9px) {
+  .navbar .container-fluid {
+    flex-direction: row;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  .navbar .container-fluid .collapse ul li a {
+    letter-spacing: unset;
+    font-size: 1.6rem;
+  }
+
+  .tombstones-section .wrapper .row p {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    padding: 1.5rem 3rem;
+  }
+
+  .tombstones-section .wrapper .row img {
+    position: absolute;
+    right: 0;
+    top: -30rem;
+    max-width: 40%;
+  }
+
+  .txt {
+    font-size: 1.6rem;
+  }
+
+  .slick-arrow {
+    display: none !important;
+  }
+
+  .canvas-container {
+    position: relative;
+    user-select: none;
+    max-width: 100%;
+  }
+
+  #main-grave {
+    width: 100%;
+    /* Use relative width */
+    height: unset !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    touch-action: none;
+    user-select: none;
+    max-width: 100% !important;
+  }
+
+  .upper-canvas {
+    width: 100%;
+    /* Use relative width */
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    touch-action: none;
+    user-select: none;
+    max-width: 100% !important;
+  }
+
+  .selection .nav-tabs {
+    flex-direction: column;
+  }
+  .selection .nav-tabs .nav-item {
+    width: 90%;
+  }
+
+  .tab-content .grave-type {
+    flex-direction: column;
+  }
+  .tab-content .grave-type button {
+    width: 22.5rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .tombstones-section {
+    height: 260rem;
+  }
+
+  .tombstones-section .wrapper .row img {
+    display: none;
+  }
+
+  .tombstones-section .wrapper h2 {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .tombstones-section .wrapper .row p {
+    text-align: center;
+  }
+
+  .materials {
+    height: 85rem;
+  }
+  .materials .wrapper {
+    top: 57.5%;
+  }
+
+  .canvas-container {
+    margin: 0 auto;
+  }
+
+  .settings {
+    padding-bottom: 30rem;
+  }
+
+  .settings .col-lg-4 {
+    box-shadow: none;
+  }
+
+  .settings .tab-content {
+    padding: 0;
+    margin-top: 5rem;
+  }
+
+  .settings .config-row h4 {
+    padding: 0;
+  }
+
+  .settings .config-row {
+    text-align: center;
+  }
+
+  .settings .config-row .configuration {
+    flex-direction: column;
+  }
+
+  .cart .col-sm-3.offset-sm-4.offset-lg-0 {
+    order: 3;
+  }
+
+  .cart .cart-footer .col-lg-6 {
+    text-align: end;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .navbar {
+    padding: 0;
+  }
+
+  .tombstones-section {
+    height: 465rem;
+  }
+
+  .tombstones-section .wrapper .row {
+    padding: 0;
+  }
+
+  .gallery .col-md-6 {
+    text-align: center;
+  }
+
+  .credentials {
+    padding: 10rem 0;
+  }
+
+  footer .wrapper ul {
+    flex-direction: column;
+  }
+
+  .contact form {
+    padding: 15rem 5rem;
+  }
+
+  .gallery {
+    padding-bottom: 40rem;
+  }
+
+  .main,
+.settings,
+.cart {
+    padding-bottom: 50rem;
+  }
+
+  .main .contact > .row:first-child {
+    padding: 0;
+  }
+
+  .contact form {
+    padding: 5rem;
+  }
+
+  .cart .container > .row {
+    display: none;
+  }
+
+  .cart .col-sm-3.offset-sm-4.offset-lg-0 {
+    order: unset;
+  }
+
+  .cart .cart-item {
+    position: relative;
+  }
+
+  .cart .cart-item .row {
+    text-align: center;
+    row-gap: 2rem;
+  }
+
+  .cart .cart-item .row .col-lg-1.col-sm-2 img {
+    position: absolute;
+    top: 2.5%;
+    right: 2.5%;
+  }
+
+  .cart-footer {
+    text-align: center;
+  }
+
+  .cart .cart-footer .col-lg-6 {
+    text-align: center;
+    align-items: unset;
+  }
+
+  .cart .cart-footer > .row {
+    row-gap: 3rem;
+  }
+  .cart .cart-footer > .row .btn {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  .cart .cart-footer :is(.col-lg-3, .col-lg-6) {
+    display: block;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .tombstones-section .wrapper h2 {
+    font-size: 2.2rem;
+  }
+
+  .tombstones-section .wrapper .line {
+    display: none;
+  }
+
+  .tombstones-section .wrapper .row p {
+    padding: 0 1.5rem;
+  }
+
+  .tombstones-section .wrapper .btn.btn-primary {
+    margin-top: 5rem;
+  }
+
+  .materials {
+    height: 95rem;
+  }
+
+  .materials .wrapper .txt {
+    text-align: center;
+  }
+
+  .materials .wrapper .title {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .gallery {
+    padding-bottom: 15rem;
+  }
+
+  .selection .tab-content .price {
+    display: block;
+    text-align: center;
+  }
+
+  .selection .tab-content .price h3 {
+    text-align: center;
+  }
+
+  .selection .tab-content .btn-split button.btn {
+    font-size: 14px;
+  }
+  .selection .tab-content .btn-split button.btn img {
+    display: none;
+  }
+
+  .main .faq,
+.main .order-process,
+.main .credentials-page {
+    text-align: center;
+  }
+
+  .main .credentials-page {
+    padding: 3rem 0;
+  }
+
+  .contact form {
+    padding-bottom: 10rem;
+  }
+}

@@ -1,0 +1,18 @@
+@mixin form($mb: "unset") {
+    input:not([type="checkbox"]),
+    textarea {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid var(--gold);
+        color: var(--gold);
+        padding-bottom: 1rem;
+        outline: none;
+        background-color: transparent;
+        resize: none;
+        margin-bottom: $mb;
+
+        &::placeholder {
+            color: var(--gold);
+        }
+    }
+}
